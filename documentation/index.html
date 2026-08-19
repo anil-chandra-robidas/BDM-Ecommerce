@@ -106,14 +106,16 @@
 
     .brand-logo {
       background: linear-gradient(135deg, #6366f1, #4f46e5);
-      width: 44px;
-      height: 44px;
+      min-width: 48px;
+      height: 42px;
+      padding: 0 6px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1.35rem;
+      font-size: 0.95rem;
+      letter-spacing: -0.02em;
       box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
     }
 
@@ -452,7 +454,7 @@
   <!-- Mobile Header -->
   <div class="mobile-header">
     <div style="font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
-      <span style="background: var(--primary); padding: 2px 8px; border-radius: 6px;">B</span>
+      <span style="background: var(--primary); padding: 2px 8px; border-radius: 6px; font-weight: 800; font-size: 0.85rem;">BDM</span>
       <span>BDM-Ecommerce Docs</span>
     </div>
     <button class="mobile-toggle" onclick="toggleSidebar()">☰ Menu</button>
@@ -462,7 +464,7 @@
     <!-- Sidebar Navigation -->
     <aside id="sidebar">
       <div class="brand">
-        <div class="brand-logo">B</div>
+        <div class="brand-logo">BDM</div>
         <div class="brand-info">
           <h2>BDM-Ecommerce</h2>
           <span class="brand-badge">v1.0.0 Documentation</span>
