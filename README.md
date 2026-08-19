@@ -1,4 +1,4 @@
-# 🛍️ BDM-Ecommerce (bdshop) — Enterprise-Grade Modern E-Commerce Platform & Visual CMS
+# 🛍️ BDM-Ecommerce — Enterprise-Grade Modern E-Commerce Platform & Visual CMS
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2.15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-emerald?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/anil-chandra-robidas/BDM-Ecommerce/pulls)
 
-**BDM-Ecommerce (bdshop)** is an ultra-fast, responsive modern e-commerce platform and visual content management system (CMS) built with **Next.js 14 (App Router)**, **React 18**, **TypeScript**, and **Tailwind CSS**. It combines a refined shopping experience with a powerful, zero-code administrative studio.
+**BDM-Ecommerce** is an ultra-fast, responsive modern e-commerce platform and visual content management system (CMS) built with **Next.js 14 (App Router)**, **React 18**, **TypeScript**, and **Tailwind CSS**. It combines a refined shopping experience with a powerful, zero-code administrative studio.
 
 ---
 

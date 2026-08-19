@@ -1,6 +1,6 @@
 # 🚀 ThemeForest Item Submission & Upload Guide
 
-This step-by-step guide will help you upload and publish **BDShop / BDM-Ecommerce** to ThemeForest as an Envato Author.
+This step-by-step guide will help you upload and publish **BDM-Ecommerce** to ThemeForest as an Envato Author.
 
 ---
 
@@ -11,7 +11,7 @@ When creating your new item submission on ThemeForest:
 | Field | Recommended Value |
 | :--- | :--- |
 | **Category** | `Site Templates / Retail / Shopping` OR `Site Templates / React / Next.js / eCommerce` |
-| **Name / Title** | `BDShop - Luxury Modern E-Commerce Next.js 14 Template with Admin CMS & Page Builder` |
+| **Name / Title** | `BDM-Ecommerce - Luxury Modern E-Commerce Next.js 14 Template with Admin CMS & Page Builder` |
 | **Price Suggestion** | **$24 – $29** (Regular License) / **$600 – $800** (Extended License) |
 | **Compatible Browsers** | Chrome, Firefox, Safari, Edge, Opera |
 | **Compatible With** | React 18.x, Next.js 14.x, Tailwind CSS 3.x, TypeScript 5.x |
@@ -39,7 +39,7 @@ Envato requires the following 3 graphical assets in your upload form:
 
 1. **Thumbnail (`thumbnail.png` / `thumbnail.jpg`)**:
    - Exact Dimensions: **`80 × 80 px`**
-   - Content: Logo/Icon for BDShop.
+   - Content: Logo/Icon for BDM-Ecommerce.
 2. **Inline Preview Image (`preview.png` / `preview.jpg`)**:
    - Exact Dimensions: **`590 × 300 px`**
    - Content: High-impact hero snapshot of the storefront and admin dashboard.
@@ -54,7 +54,7 @@ Your final downloadable ZIP file submitted to ThemeForest should be structured l
 
 ```
 BDM-Ecommerce-package.zip/
-├── bdshop-source/
+├── bdm-ecommerce-source/
 │   ├── app/
 │   ├── components/
 │   ├── context/
