@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BDShop / BDM-Ecommerce — Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --primary-light: #eef2ff;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --emerald-600: #059669;
+      --amber-500: #f59e0b;
+      --rose-500: #f43f5e;
+      --sidebar-width: 280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--slate-50);
+      color: var(--slate-800);
+      line-height: 1.65;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    aside {
+      width: var(--sidebar-width);
+      background: var(--slate-900);
+      color: #fff;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-col: column;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--slate-800);
+    }
+
+    .brand-logo {
+      background: var(--primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      background: rgba(79, 70, 229, 0.25);
+      color: #a5b4fc;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-group-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-500);
+      margin: 1.5rem 0 0.5rem 0.5rem;
+    }
+
+    .nav-links {
+      list-style: none;
+    }
+
+    .nav-links li a {
+      display: block;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links li a.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Main Content */
+    main {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      max-width: 1000px;
+      padding: 3.5rem 3rem 6rem;
+    }
+
+    /* Typography & Elements */
+    h1, h2, h3, h4 {
+      color: var(--slate-900);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--slate-600);
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 3.5rem 0 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--slate-200);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin: 2rem 0 0.75rem;
+    }
+
+    p, ul, ol {
+      margin-bottom: 1.25rem;
+      color: var(--slate-700);
+      font-size: 0.95rem;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--slate-900);
+    }
+
+    /* Code Blocks */
+    pre, code {
+      font-family: 'Fira Code', monospace;
+    }
+
+    code {
+      background: var(--slate-200);
+      color: var(--primary-dark);
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+
+    pre {
+      background: var(--slate-900);
+      color: #f8fafc;
+      padding: 1.25rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border: 1px solid var(--slate-800);
+    }
+
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* Cards & Callouts */
+    .card {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .alert {
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .alert-info {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      color: #312e81;
+    }
+
+    .alert-tip {
+      background: #ecfdf5;
+      border-left: 4px solid var(--emerald-600);
+      color: #064e3b;
+    }
+
+    .alert-warning {
+      background: #fffbeb;
+      border-left: 4px solid var(--amber-500);
+      color: #78350f;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--slate-200);
+    }
+
+    th, td {
+      padding: 0.85rem 1.2rem;
+      text-align: left;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    th {
+      background: var(--slate-100);
+      color: var(--slate-900);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+    .badge-emerald { background: #d1fae5; color: #065f46; }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--slate-200);
+      color: var(--slate-500);
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      aside { width: 100%; position: relative; height: auto; }
+      main { margin-left: 0; padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside>
+    <div class="brand">
+      <div class="brand-logo">B</div>
+      <div>
+        <div class="brand-title">BDShop</div>
+        <span class="brand-badge">v1.0.0 Documentation</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <div class="nav-group-title">Getting Started</div>
+      <li><a href="#overview" class="active">Overview & Features</a></li>
+      <li><a href="#requirements">System Requirements</a></li>
+      <li><a href="#installation">Installation & Setup</a></li>
+      <li><a href="#structure">Folder Structure</a></li>
+
+      <div class="nav-group-title">Storefront Architecture</div>
+      <li><a href="#pages">Pages & Routes</a></li>
+      <li><a href="#state-management">Cart & Wishlist State</a></li>
+      <li><a href="#data-customization">Customizing Products</a></li>
+      <li><a href="#theme-styling">Tailwind Styling & Colors</a></li>
+
+      <div class="nav-group-title">Admin Studio & CMS</div>
+      <li><a href="#admin-dashboard">Admin Dashboard</a></li>
+      <li><a href="#header-footer-cms">Header & Footer Studio</a></li>
+      <li><a href="#pages-builder">Pages Visual Builder</a></li>
+
+      <div class="nav-group-title">Deployment & Credits</div>
+      <li><a href="#deployment">Vercel & Production Build</a></li>
+      <li><a href="#credits">Credits & Sources</a></li>
+      <li><a href="#support">Author Support & License</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- 1. Overview -->
+    <section id="overview">
+      <h1>BDShop / BDM-Ecommerce</h1>
+      <p class="lead">Modern Luxury Next.js 14 E-Commerce Template with Built-in Visual Admin CMS & Page Builder.</p>
+
+      <div class="card">
+        <h3 style="margin-top: 0;">Item Details</h3>
+        <table>
+          <tr><td><strong>Created By:</strong></td><td>Anil Chandra Robidas (Envato Author)</td></tr>
+          <tr><td><strong>Framework:</strong></td><td>Next.js 14.2 (App Router) + React 18.3 + TypeScript 5</td></tr>
+          <tr><td><strong>Styling:</strong></td><td>Tailwind CSS 3.4 + Custom Tokens</td></tr>
+          <tr><td><strong>Icons:</strong></td><td>Lucide React (400+ vector icons)</td></tr>
+          <tr><td><strong>State Management:</strong></td><td>React Context API + LocalStorage Synchronization</td></tr>
+        </table>
+      </div>
+
+      <h2>✨ Key Features</h2>
+      <ul>
+        <li><strong>⚡ Next.js 14 App Router</strong> with Static Site Generation (SSG) and Server-Side Rendering (SSR).</li>
+        <li><strong>🛒 Persistent Shopping Cart & Slide-out Drawer</strong> with live quantity steppers, shipping progress calculation, and coupon vouchers (<code>LUXE20</code>).</li>
+        <li><strong>💖 Persistent Wishlist Portal</strong> with instant 1-click move-to-cart sync.</li>
+        <li><strong>💳 3-Step Checkout Wizard</strong> with contact information, shipping rate calculators, and multi-method payments.</li>
+        <li><strong>🔍 Faceted Shop Filtering</strong> by category, subcategory, price slider, star rating, and stock status.</li>
+        <li><strong>🎛️ Built-in Admin Studio & Visual CMS</strong> with real-time live previews, order fulfillment workflow, catalog manager, and pages builder.</li>
+      </ul>
+    </section>
+
+    <!-- 2. Requirements -->
+    <section id="requirements">
+      <h2>📋 System Requirements</h2>
+      <p>Before installing and running this project locally, ensure you have the following installed on your machine:</p>
+      <ul>
+        <li><strong>Node.js:</strong> <code>v18.17.0</code> or higher (v20+ recommended). Check with <code>node -v</code>.</li>
+        <li><strong>NPM:</strong> <code>v9.0.0</code> or higher (or <code>yarn</code> / <code>pnpm</code> / <code>bun</code>).</li>
+        <li><strong>Browser:</strong> Google Chrome, Mozilla Firefox, Safari, or Microsoft Edge.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Installation -->
+    <section id="installation">
+      <h2>🚀 Installation & Setup</h2>
+      <p>Follow these simple steps to get your storefront and admin studio running in under 2 minutes:</p>
+
+      <h3>Step 1: Extract & Open Project</h3>
+      <pre><code>cd bdshop</code></pre>
+
+      <h3>Step 2: Install NPM Dependencies</h3>
+      <pre><code>npm install</code></pre>
+
+      <h3>Step 3: Launch Local Development Server</h3>
+      <pre><code>npm run dev</code></pre>
+
+      <div class="alert alert-tip">
+        <span>💡 <strong>Success!</strong> Open <code>http://localhost:3000</code> in your browser to view the storefront, or <code>http://localhost:3000/admin</code> to view the Admin Studio.</span>
+      </div>
+
+      <h3>Step 4: Create an Optimized Production Build</h3>
+      <pre><code>npm run build
+npm start</code></pre>
+    </section>
+
+    <!-- 4. Structure -->
+    <section id="structure">
+      <h2>📁 Folder Structure</h2>
+      <pre><code>bdshop/
+├── app/
+│   ├── about/page.tsx          # About Us page
+│   ├── account/page.tsx        # Customer order history & account portal
+│   ├── admin/page.tsx          # Full Admin Dashboard & Visual CMS
+│   ├── cart/page.tsx           # Shopping cart page
+│   ├── checkout/page.tsx       # 3-step checkout & payment page
+│   ├── contact/page.tsx        # Contact Us page with showrooms & FAQ
+│   ├── product/[id]/page.tsx   # Dynamic product details page
+│   ├── shop/page.tsx           # Shop catalogue with filters & search
+│   ├── wishlist/page.tsx       # Wishlist portal
+│   ├── globals.css             # Tailwind base styles and custom animations
+│   ├── layout.tsx              # Root layout with Header, Footer, & Providers
+│   ├── not-found.tsx           # Custom 404 error page
+│   └── page.tsx                # Storefront home page
+├── components/
+│   ├── cart/                   # Cart line items & summary components
+│   ├── home/                   # Hero, Best Sellers, Flash Sale, Testimonials
+│   ├── layout/                 # Header, Footer, MegaMenu, MobileMenu
+│   ├── product/                # ProductCard & ProductGrid components
+│   └── ui/                     # BackToTop, PageLoader, badges
+├── context/
+│   ├── CartContext.tsx         # Global cart state & LocalStorage sync
+│   └── WishlistContext.tsx     # Global wishlist state & LocalStorage sync
+├── data/
+│   └── products.ts             # Mock product catalogue & category data
+├── types/
+│   └── index.ts                # TypeScript interface definitions
+├── tailwind.config.ts          # Tailwind design tokens & colors
+├── tsconfig.json               # TypeScript configuration
+└── package.json                # Dependencies and script declarations</code></pre>
+    </section>
+
+    <!-- 5. Customizing Products -->
+    <section id="data-customization">
+      <h2>📦 Customizing Products & Categories</h2>
+      <p>All catalog products, reviews, categories, and tags are stored in <code>data/products.ts</code>.</p>
+
+      <h3>Adding or Editing a Product:</h3>
+      <pre><code>// In data/products.ts
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Classic Suede Chelsea Boots",
+    price: 189.99,
+    originalPrice: 249.99,
+    image: "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&h=700&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&h=700&fit=crop",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=700&fit=crop"
+    ],
+    category: "Men's Fashion",
+    subcategory: "Footwear",
+    description: "Handcrafted from genuine Italian suede with elasticated side gussets.",
+    rating: 4.9,
+    reviews: 42,
+    inStock: true,
+    colors: ["Tan", "Black", "Dark Brown"],
+    sizes: ["US 8", "US 9", "US 10", "US 11"],
+    tags: ["shoes", "boots", "leather", "classic"],
+    badge: "Best Seller",
+    featured: true,
+  },
+  // Add more products here...
+];</code></pre>
+    </section>
+
+    <!-- 6. Theme Styling -->
+    <section id="theme-styling">
+      <h2>🎨 Tailwind Styling & Color Customization</h2>
+      <p>Brand colors and design tokens can be customized directly in <code>tailwind.config.ts</code>:</p>
+      <pre><code>// In tailwind.config.ts
+export default {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          600: '#4f46e5', // Change your brand primary color here
+          700: '#4338ca',
+        }
+      }
+    }
+  }
+}</code></pre>
+    </section>
+
+    <!-- 7. Admin Studio & CMS -->
+    <section id="admin-dashboard">
+      <h2>🎛️ Admin Studio & Visual CMS</h2>
+      <p>The Admin Dashboard (<code>/admin</code>) allows instant zero-code customization with live real-time preview frames:</p>
+
+      <h3>1. Header & Navigation Studio</h3>
+      <ul>
+        <li><strong>Announcement Ribbon:</strong> Enable/disable, change ribbon text, and configure coupon vouchers (<code>LUXE20</code>).</li>
+        <li><strong>Brand Logo & Taglines:</strong> Update store name and subtitle badge.</li>
+        <li><strong>Header Action Icons:</strong> Toggle Search, Wishlist, Account, and Cart icons.</li>
+        <li><strong>Navigation Manager:</strong> Add custom menu routes using the <code>+ Add Nav Item</code> modal.</li>
+      </ul>
+
+      <h3>2. Footer & Guarantees Studio</h3>
+      <ul>
+        <li><strong>Company Profile:</strong> Bio story, physical address, support phone, and support email.</li>
+        <li><strong>Value Guarantees:</strong> Manage store pledges with the <code>+ Add Guarantee</code> modal.</li>
+        <li><strong>Quick Links & Service Links:</strong> Add links with dedicated modals.</li>
+        <li><strong>Social Channels Hub:</strong> Configure Instagram, Twitter/X, Facebook, YouTube, and GitHub URLs.</li>
+      </ul>
+
+      <h3>3. Pages Visual Builder</h3>
+      <ul>
+        <li><strong>Home Page Creator:</strong> Customize hero headline, narrative subtitle, CTA buttons, background photo, flash sale card, and customer testimonials with star ratings.</li>
+        <li><strong>About Us Creator:</strong> Edit mission story, add core values, leadership team profiles, and timeline milestones.</li>
+        <li><strong>Contact Us Creator:</strong> Configure SLA response time, global flagship showrooms (New York, London, Tokyo), and interactive FAQ questions.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Deployment -->
+    <section id="deployment">
+      <h2>🚢 Production Deployment (Vercel)</h2>
+      <ol>
+        <li>Push your source code to GitHub / GitLab / Bitbucket.</li>
+        <li>Log in to <a href="https://vercel.com" target="_blank">Vercel</a> and click <strong>"Add New Project"</strong>.</li>
+        <li>Import your Git repository.</li>
+        <li>Vercel will auto-detect Next.js:
+          <ul>
+            <li><strong>Framework Preset:</strong> Next.js</li>
+            <li><strong>Build Command:</strong> <code>npm run build</code></li>
+            <li><strong>Output Directory:</strong> <code>.next</code></li>
+          </ul>
+        </li>
+        <li>Click <strong>Deploy</strong>. Your site will be live on a global CDN in under 1 minute!</li>
+      </ol>
+    </section>
+
+    <!-- 9. Credits -->
+    <section id="credits">
+      <h2>📜 Credits & Third-Party Libraries</h2>
+      <table>
+        <thead><tr><th>Library / Asset</th><th>Source / URL</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Next.js</td><td><a href="https://nextjs.org" target="_blank">nextjs.org</a></td><td>React Application Framework</td></tr>
+          <tr><td>React</td><td><a href="https://react.dev" target="_blank">react.dev</a></td><td>UI Component Library</td></tr>
+          <tr><td>Tailwind CSS</td><td><a href="https://tailwindcss.com" target="_blank">tailwindcss.com</a></td><td>Utility-First CSS Framework</td></tr>
+          <tr><td>Lucide React</td><td><a href="https://lucide.dev" target="_blank">lucide.dev</a></td><td>Icon Pack</td></tr>
+          <tr><td>Unsplash</td><td><a href="https://unsplash.com" target="_blank">unsplash.com</a></td><td>Demo Presentation Photography</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-info">
+        <span>ℹ️ <strong>Image Disclaimer:</strong> Demo images used in the live preview are sourced from Unsplash and are for demonstration purposes only. They are not included in the main commercial package.</span>
+      </div>
+    </section>
+
+    <!-- 10. Support -->
+    <section id="support">
+      <h2>💬 Author Support & Inquiries</h2>
+      <p>Thank you for purchasing <strong>BDShop / BDM-Ecommerce</strong>! If you have any questions, encounter any issues, or need customization assistance, feel free to reach out via your ThemeForest Author profile.</p>
+
+      <footer>
+        <div>© 2026 <strong>Anil Chandra Robidas</strong>. All rights reserved.</div>
+        <div>Built for ThemeForest / Envato Market.</div>
+      </footer>
+    </section>
+  </main>
+
+</body>
+</html>
