@@ -1,4 +1,4 @@
-# 🛍️ bdshop — Enterprise-Grade Modern E-Commerce Platform & Visual CMS
+# 🛍️ BDM-Ecommerce (bdshop) — Enterprise-Grade Modern E-Commerce Platform & Visual CMS
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2.15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)](https://reactjs.org/)
@@ -6,9 +6,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-0.441-f97316?style=flat-square)](https://lucide.dev/)
 [![License](https://img.shields.io/badge/License-MIT-emerald?style=flat-square)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/arntech-anil/bdshop/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/anil-chandra-robidas/BDM-Ecommerce/pulls)
 
-**bdshop** is an ultra-fast, responsive modern e-commerce platform and visual content management system (CMS) built with **Next.js 14 (App Router)**, **React 18**, **TypeScript**, and **Tailwind CSS**. It combines a refined shopping experience with a powerful, zero-code administrative studio.
+**BDM-Ecommerce (bdshop)** is an ultra-fast, responsive modern e-commerce platform and visual content management system (CMS) built with **Next.js 14 (App Router)**, **React 18**, **TypeScript**, and **Tailwind CSS**. It combines a refined shopping experience with a powerful, zero-code administrative studio.
 
 ---
 
@@ -34,7 +34,7 @@
 
 ```
 +-----------------------------------------------------------------------------+
-|                                   BDSHOP                                    |
+|                               BDM-ECOMMERCE                                 |
 +--------------------------------------+--------------------------------------+
 |          🛍️ STOREFRONT               |          🛠️ ADMIN CMS                |
 +--------------------------------------+--------------------------------------+
@@ -156,7 +156,7 @@ Access the administrative interface at [`http://localhost:3000/admin`](http://lo
 ## 🏗️ Project Architecture & Directory Structure
 
 ```
-bdshop/
+BDM-Ecommerce/
 ├── app/
 │   ├── about/
 │   │   └── page.tsx            # About Us page: Mission, Values, Team, Milestones
@@ -300,7 +300,7 @@ export interface Review {
 
 ## 🎨 Design System & Color Tokens
 
-bdshop utilizes a cohesive luxury palette built on Tailwind CSS utility classes:
+BDM-Ecommerce utilizes a cohesive luxury palette built on Tailwind CSS utility classes:
 
 | Color Role | Hex Code | Tailwind Token | Usage |
 | :--- | :--- | :--- | :--- |
@@ -322,8 +322,8 @@ bdshop utilizes a cohesive luxury palette built on Tailwind CSS utility classes:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/arntech-anil/bdshop.git
-cd bdshop
+git clone https://github.com/anil-chandra-robidas/BDM-Ecommerce.git
+cd BDM-Ecommerce
 ```
 
 ### 2. Install Project Dependencies
@@ -413,19 +413,12 @@ CMD ["node", "server.js"]
 
 ## 🛡️ Troubleshooting & FAQ
 
-### Q1: Why do I see a 403 error when pushing to GitHub?
-> **Answer**: Your local Git client has cached credentials for a different GitHub user. Remove the old credential in **Windows Credential Manager** (`git:https://github.com`) or use a Personal Access Token:
-> ```bash
-> git remote set-url origin https://<TOKEN>@github.com/arntech-anil/bdshop.git
-> git push -u origin main
-> ```
-
-### Q2: How do I add new products to the catalogue?
+### Q1: How do I add new products to the catalogue?
 > **Answer**: You can either:
 > 1. Use the **Admin Dashboard** (`/admin`) ➔ Click **Products** ➔ **"+ Add Product"** modal.
 > 2. Or add items directly to [`data/products.ts`](file:///d:/ecomerce/data/products.ts).
 
-### Q3: How do coupon discount codes work?
+### Q2: How do coupon discount codes work?
 > **Answer**: The checkout and cart summary accept the promo code `LUXE20` for an immediate 20% discount off total cart value. Additional promo vouchers can be configured in [`context/CartContext.tsx`](file:///d:/ecomerce/context/CartContext.tsx).
 
 ---
@@ -444,7 +437,7 @@ CMD ["node", "server.js"]
 
 Contributions, issues, and feature suggestions are welcome!
 
-1. Fork the repository (`https://github.com/arntech-anil/bdshop/fork`).
+1. Fork the repository (`https://github.com/anil-chandra-robidas/BDM-Ecommerce/fork`).
 2. Create your feature branch: `git checkout -b feature/amazing-feature`.
 3. Commit your changes: `git commit -m 'feat: add amazing feature'`.
 4. Push to branch: `git push origin feature/amazing-feature`.
@@ -454,5 +447,4 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-**Built with ❤️ for bdshop.**#   B D M - E c o m m e r c e  
- 
+**Built with ❤️ for BDM-Ecommerce.**
