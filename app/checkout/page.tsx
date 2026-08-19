@@ -221,7 +221,7 @@ export default function CheckoutPage() {
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold mb-2">Order Confirmed!</h1>
             <p className="text-indigo-100 text-sm sm:text-base max-w-md mx-auto">
-              Thank you for choosing LUXE Store. We&apos;ve received your order and are preparing it for shipment.
+              Thank you for choosing BDM-Ecommerce. We&apos;ve received your order and are preparing it for shipment.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider">
               <span>ORDER NUMBER:</span>

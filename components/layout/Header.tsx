@@ -107,7 +107,7 @@ export default function Header() {
             <Sparkles className="w-3.5 h-3.5 text-amber-300 hidden sm:inline-block animate-pulse-slow" />
             <span>
               Free shipping on orders over $50 | Use code{' '}
-              <strong className="underline decoration-amber-300 font-bold">LUXE20</strong> for 20% off
+              <strong className="underline decoration-amber-300 font-bold">BDM20</strong> for 20% off
             </span>
           </div>
           <button
@@ -147,10 +147,10 @@ export default function Header() {
               {/* Brand Logo */}
               <Link href="/" className="flex items-center gap-2 group">
                 <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gradient">
-                  LUXE
+                  BDM
                 </span>
                 <span className="hidden sm:inline-block text-[10px] tracking-widest uppercase font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                  Store
+                  Ecommerce
                 </span>
               </Link>
             </div>

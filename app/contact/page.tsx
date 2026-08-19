@@ -81,7 +81,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Direct Concierge Line',
-      line1: '+1 (800) 555-LUXE (5893)',
+      line1: '+1 (800) 555-BDM (236)',
       line2: '+1 (555) 123-4567 (International)',
       action: 'Call Now',
       href: 'tel:+18005555893',
@@ -89,10 +89,10 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Inquiries',
-      line1: 'concierge@luxestore.com',
-      line2: 'support@luxestore.com',
+      line1: 'concierge@bdmecommerce.com',
+      line2: 'support@bdmecommerce.com',
       action: 'Send Email',
-      href: 'mailto:concierge@luxestore.com',
+      href: 'mailto:concierge@bdmecommerce.com',
     },
     {
       icon: Clock,

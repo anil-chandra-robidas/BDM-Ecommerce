@@ -23,9 +23,9 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Us — LUXE Store',
+  title: 'About Us — BDM-Ecommerce',
   description:
-    'Learn about LUXE Store, our mission to bring premium quality craftsmanship, sustainable design, and unmatched style to your lifestyle.',
+    'Learn about BDM-Ecommerce, our mission to bring premium quality craftsmanship, sustainable design, and unmatched style to your lifestyle.',
 };
 
 export default function AboutPage() {
@@ -247,7 +247,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-slate-600 leading-relaxed text-base">
-                At LUXE, we believe that true elegance lies in simplicity, endurance, and ethical creation. Born in 2021, LUXE Store set out to bridge the gap between unattainable haute couture and fast disposable commodities.
+                At BDM-Ecommerce, we believe that true elegance lies in simplicity, endurance, and ethical creation. Born in 2021, BDM-Ecommerce set out to bridge the gap between unattainable haute couture and fast disposable commodities.
               </p>
 
               <p className="text-slate-600 leading-relaxed text-base">

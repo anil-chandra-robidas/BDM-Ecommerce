@@ -207,7 +207,7 @@ export default function AdminDashboard() {
   const [formTags, setFormTags] = useState('');
 
   // General Settings state
-  const [storeName, setStoreName] = useState('LUXE Store');
+  const [storeName, setStoreName] = useState('BDM-Ecommerce');
   const [storeCurrency, setStoreCurrency] = useState('USD ($)');
   const [freeShippingThreshold, setFreeShippingThreshold] = useState('50');
   const [maintenanceMode, setMaintenanceMode] = useState(false);
@@ -220,11 +220,11 @@ export default function AdminDashboard() {
   // Header State
   const [headerAnnouncementEnabled, setHeaderAnnouncementEnabled] = useState(true);
   const [headerAnnouncementText, setHeaderAnnouncementText] = useState(
-    'Free shipping on orders over $50 | Use code LUXE20 for 20% off'
+    'Free shipping on orders over $50 | Use code BDM20 for 20% off'
   );
-  const [headerAnnouncementCode, setHeaderAnnouncementCode] = useState('LUXE20');
-  const [headerBrandText, setHeaderBrandText] = useState('LUXE');
-  const [headerTaglineBadge, setHeaderTaglineBadge] = useState('Store');
+  const [headerAnnouncementCode, setHeaderAnnouncementCode] = useState('BDM20');
+  const [headerBrandText, setHeaderBrandText] = useState('BDM');
+  const [headerTaglineBadge, setHeaderTaglineBadge] = useState('Ecommerce');
   const [showSearchIcon, setShowSearchIcon] = useState(true);
   const [showWishlistIcon, setShowWishlistIcon] = useState(true);
   const [showAccountIcon, setShowAccountIcon] = useState(true);
@@ -244,15 +244,15 @@ export default function AdminDashboard() {
   const [megaMenuSubtext, setMegaMenuSubtext] = useState(
     'Save up to 40% on curated luxury essentials. Limited time only.'
   );
-  const [megaMenuCoupon, setMegaMenuCoupon] = useState('LUXE20');
+  const [megaMenuCoupon, setMegaMenuCoupon] = useState('BDM20');
 
   // Footer State
   const [footerAboutText, setFooterAboutText] = useState(
     'Your premier destination for luxury fashion, modern electronics, and refined home essentials. Designed for those who value elegance, craftsmanship, and innovation.'
   );
   const [footerAddress, setFooterAddress] = useState('540 Madison Ave, New York, NY 10022');
-  const [footerPhone, setFooterPhone] = useState('+1 (800) 555-LUXE (5893)');
-  const [footerEmail, setFooterEmail] = useState('support@luxestore.com');
+  const [footerPhone, setFooterPhone] = useState('+1 (800) 555-BDM (236)');
+  const [footerEmail, setFooterEmail] = useState('support@bdmecommerce.com');
 
   // Value Guarantees
   const [valueProps, setValueProps] = useState([
@@ -298,7 +298,7 @@ export default function AdminDashboard() {
   const [newsletterPromo, setNewsletterPromo] = useState(
     'Subscribe to get 15% off your first order, private sale invitations, and curated lifestyle drops.'
   );
-  const [footerCopyright, setFooterCopyright] = useState('© 2026 LUXE Store, Inc. All rights reserved.');
+  const [footerCopyright, setFooterCopyright] = useState('© 2026 BDM-Ecommerce, Inc. All rights reserved.');
 
   // Payment Badges
   const [payments, setPayments] = useState({
@@ -331,7 +331,7 @@ export default function AdminDashboard() {
   const [homePromoSubtext, setHomePromoSubtext] = useState(
     'Unlock private seasonal curation and complimentary priority shipping worldwide.'
   );
-  const [homePromoCode, setHomePromoCode] = useState('LUXE35');
+  const [homePromoCode, setHomePromoCode] = useState('BDM35');
   const [homePromoDiscount, setHomePromoDiscount] = useState('35% OFF');
 
   // Home Testimonials
@@ -340,7 +340,7 @@ export default function AdminDashboard() {
       id: 1,
       name: 'Victoria Stirling',
       role: 'Fashion Editor, Milan',
-      quote: 'LUXE delivers an unmatched standard of refined elegance and seamless concierge service.',
+      quote: 'BDM-Ecommerce delivers an unmatched standard of refined elegance and seamless concierge service.',
       rating: 5,
     },
     {
@@ -369,7 +369,7 @@ export default function AdminDashboard() {
     'Empowering your signature lifestyle with intentional design.'
   );
   const [aboutMissionBody1, setAboutMissionBody1] = useState(
-    'At LUXE, we believe that true elegance lies in simplicity, endurance, and ethical creation. Born in 2021, LUXE Store set out to bridge the gap between unattainable haute couture and fast disposable commodities.'
+    'At BDM-Ecommerce, we believe that true elegance lies in simplicity, endurance, and ethical creation. Born in 2021, BDM-Ecommerce set out to bridge the gap between unattainable haute couture and fast disposable commodities.'
   );
 
   // About Values State

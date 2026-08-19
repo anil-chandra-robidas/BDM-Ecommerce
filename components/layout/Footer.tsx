@@ -109,10 +109,10 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-flex items-center gap-2 group">
               <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-indigo-300 to-violet-400">
-                LUXE
+                BDM
               </span>
               <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-700/50">
-                STORE
+                ECOMMERCE
               </span>
             </Link>
 
@@ -127,11 +127,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>+1 (800) 555-LUXE (5893)</span>
+                <span>+1 (800) 555-BDM (236)</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>support@luxestore.com</span>
+                <span>support@bdmecommerce.com</span>
               </div>
             </div>
 
@@ -268,7 +268,7 @@ export default function Footer() {
         {/* Bottom Bar: Copyright, Payment Methods, Legal */}
         <div className="border-t border-slate-800/80 pt-8 mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-xs text-slate-400 text-center md:text-left">
-            <p>© {currentYear} LUXE Store, Inc. All rights reserved.</p>
+            <p>© {currentYear} BDM-Ecommerce, Inc. All rights reserved.</p>
             <p className="text-slate-500 mt-1">
               Designed with precision for elevated shopping experiences.
             </p>

@@ -15,10 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'LUXE Store — Premium Online Shopping',
+  title: 'BDM-Ecommerce — Premium Online Shopping',
   description:
-    'Discover premium fashion, electronics, home goods and more. Shop the latest trends with free shipping on orders over $50.',
-  keywords: ['ecommerce', 'fashion', 'electronics', 'online shopping', 'premium'],
+    'Discover premium fashion, electronics, home goods and more on BDM-Ecommerce. Shop the latest trends with free shipping on orders over $50.',
+  keywords: ['ecommerce', 'fashion', 'electronics', 'online shopping', 'bdm-ecommerce'],
 };
 
 export default function RootLayout({
