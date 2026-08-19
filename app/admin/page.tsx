@@ -877,12 +877,12 @@ export default function AdminDashboard() {
         {/* Sidebar Header */}
         <div className="p-6 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-indigo-600 rounded-xl shadow-lg shadow-indigo-600/30">
-              <ShoppingBag className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-black text-sm shadow-md shadow-indigo-600/30 select-none">
+              BDM
             </div>
             <div>
-              <h1 className="font-extrabold text-lg leading-tight tracking-tight text-white">{storeName}</h1>
-              <span className="text-xs text-indigo-400 font-bold tracking-wider uppercase">ADMIN PORTAL</span>
+              <h1 className="font-extrabold text-base leading-tight tracking-tight text-white">{storeName}</h1>
+              <span className="text-[10px] text-indigo-400 font-bold tracking-wider uppercase">ADMIN PORTAL</span>
             </div>
           </div>
         </div>
@@ -1573,10 +1573,12 @@ export default function AdminDashboard() {
                       {/* Header bar preview */}
                       <div className="bg-white p-4 flex items-center justify-between border-b border-slate-100">
                         {/* Logo */}
-                        <div className="flex items-center gap-2">
-                          <span className="text-2xl font-black text-indigo-600 tracking-tight">{headerBrandText}</span>
-                          <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200">
-                            {headerTaglineBadge}
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-black text-xs shadow-sm">
+                            {headerBrandText}
+                          </div>
+                          <span className="text-base font-black text-slate-900 tracking-tight">
+                            {storeName}
                           </span>
                         </div>
 
@@ -1841,7 +1843,12 @@ export default function AdminDashboard() {
                       {/* 4-column footer body preview */}
                       <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs border-b border-slate-800">
                         <div className="space-y-2">
-                          <div className="text-lg font-black text-white">{headerBrandText}</div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-black text-xxs">
+                              {headerBrandText}
+                            </div>
+                            <span className="text-sm font-black text-white">{storeName}</span>
+                          </div>
                           <p className="text-slate-400 text-xxs line-clamp-3">{footerAboutText}</p>
                           <div className="text-xxs text-slate-400 space-y-1 pt-1">
                             <div>📍 {footerAddress}</div>

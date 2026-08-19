@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
+import Logo from '@/components/ui/Logo';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 
@@ -145,14 +146,7 @@ export default function Header() {
               </button>
 
               {/* Brand Logo */}
-              <Link href="/" className="flex items-center gap-2 group">
-                <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gradient">
-                  BDM
-                </span>
-                <span className="hidden sm:inline-block text-[10px] tracking-widest uppercase font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                  Ecommerce
-                </span>
-              </Link>
+              <Logo variant="light" size="md" />
             </div>
 
             {/* Desktop Navigation Links */}

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Logo from '@/components/ui/Logo';
 import {
   Instagram,
   Twitter,
@@ -107,14 +108,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1: Brand Info & Socials */}
           <div className="space-y-6">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-indigo-300 to-violet-400">
-                BDM
-              </span>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-700/50">
-                ECOMMERCE
-              </span>
-            </Link>
+            <Logo variant="dark" size="md" />
 
             <p className="text-slate-400 text-sm leading-relaxed">
               Your premier destination for luxury fashion, modern electronics, and refined home essentials. Designed for those who value elegance, craftsmanship, and innovation.

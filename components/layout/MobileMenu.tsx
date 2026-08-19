@@ -18,6 +18,7 @@ import {
 import { megaMenuData } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
+import Logo from '@/components/ui/Logo';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -91,18 +92,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100 bg-slate-50/50">
-          <Link
-            href="/"
-            onClick={onClose}
-            className="flex items-center gap-2 group"
-          >
-            <span className="text-2xl font-black tracking-tight text-gradient">
-              LUXE
-            </span>
-            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200">
-              STORE
-            </span>
-          </Link>
+          <div onClick={onClose}>
+            <Logo variant="light" size="sm" />
+          </div>
 
           <button
             onClick={onClose}
