@@ -454,4 +454,5 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-**Built with ❤️ for bdshop.**
+**Built with ❤️ for bdshop.**#   B D M - E c o m m e r c e  
+ 
